@@ -23,9 +23,13 @@ export function apply(ctx: Context, session: Session) {
   // ctx.i18n.define('en-US', { noHidden: 'This text has no hidden message.' })
 
   ctx.command('hidden-word <text> [secret]')
+  .option('fullTextPerChar', '-f')
   .action((_,text,secret) => {
+    //log.info(options)
+    //log.info(_)
     if (secret===undefined){return decode(text)}
-    else {return encode(secret,text)}
+    else if (!(_.options['fullTextPerChar'])) {return encode(secret,text)}
+    else {return encode(secret,text,{'fullTextPerChar':true})}
   })
 
   ctx.command('hidden-word.encode <text> <secret>')
