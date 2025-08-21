@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-hidden-word",
   "description": "将秘密信息隐藏在普通文本中 来源于[hidden-word](https://github.com/Ackites/hidden-word)",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,13 +9,17 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "homepage": "https://hidden-word.top/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ackites/hidden-word"
+  },
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "hidden"
   ],
-  "devDependencies": {},
   "peerDependencies": {
     "koishi": "^4.18.7"
   }
